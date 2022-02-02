@@ -8,7 +8,7 @@ export default {
             name, email, password
         };
 
-        await Queue.add({ user });
+        await Queue.add('RegistrationMail', { user });
 
         res.json(user);
     }
